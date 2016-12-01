@@ -1,0 +1,302 @@
+   <!-- *** MODAL ***-->
+    <div id="tmodeal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+            <h4 id="Login" class="modal-title">Where are you from? /  ¿De donde eres? </h4>
+          </div>
+          <div class="modal-body">
+              <div class="country">
+                  <select name="mySelect"
+                      ng-options="option.name for option in vm.countries track by option.code"
+                      ng-model="vm.country" class="country-select">
+                  </select>
+              </div>
+              <div><button type="button" class="btn btn-primary" ng-click="vm.ChooseLanguage()"><i class="fa fa-sign-in"></i> Submit / Enviar</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***  MODAL END ***-->
+  
+      <!-- navbar-->
+    <header class="header">
+      <div role="navigation" class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/"><h2>Travel with friends CR</h2></a>
+            <div class="navbar-buttons">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="fa fa-align-justify"></i></button>
+            </div>
+          </div>
+          <div id="navigation" class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li ng-if="!vm.CR" ><a href="#/">Home</a></li>
+              <li ng-if="!vm.CR" ><a href="#/about">Contact</a></li>
+              <li ng-if="vm.CR" ><a href="#/">Inicio</a></li>
+              <li ng-if="vm.CR"><a href="#/about">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+  
+  
+  <div ng-if="vm.CR" class="jumbotron main-jumbotron">
+      <div class="container">
+        <div class="content">
+          <h1>Bienvenidos a travel with friends Costa Rica</h1>
+          <p class="margin-bottom">Te invitamos a disfrutar de distintos paquetes vacacionales para toda la familia.</p>
+        </div>
+      </div>
+    </div>
+    <div ng-if="!vm.CR" class="jumbotron main-jumbotroncr">
+      <div class="container">
+        <div class="content">
+          <h1>Welcome to travel with friends Costa Rica</h1>
+          <p class="margin-bottom">We offer different options to get to know our country! Traveling with friends and experience the beauty Costa Rica offers</p>
+        </div>
+      </div>
+    </div>
+    <section ng-if="vm.CR"> 
+      <div class="container"> 
+        <div><img class="pull-left twflogo" src="../images/logo.jpg" alt=""> <h2> Vacaciones Fabulosas Costa Rica</h2></div>
+        <h3>Te invitamos a disfrutar de distintos paquetes vacacionales para toda la familia.</h3>
+        <h3 >Precios y oportunidades unicas para personas que viajen desde Costa Rica. No duden en dejarnos saber cualquier pregunta o duda estamos para servirles.</h3>
+      </div>
+    </section>
+    <section ng-if="!vm.CR"> 
+      <div class="container"> 
+        <div><img class="pull-left twflogo" src="../images/logo.jpg" alt=""> <h2> Travel with friends Costa Rica.</h2></div>
+        <h3>Beaches, volcanos and exciting adventures are waiting for you!</h3>
+        <h3>We offer different packages to get to know Costa Rica. Please feel free to get in contact with us and let us know any question or doubt you may have.</h3>
+      </div>
+    </section>
+
+
+
+    <section ng-if="vm.CR" class="background-gray-lightest">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/miami.jpg" alt="" class="img-responsive"></div>
+              <!-- <h3>Cuba</h3>
+              <p class="post__intro">Disfruta en Cuba los paisajes...bero sit amet quam egestas semper. Aenean ultricies mi vitae est. </p>
+              <h3>Miami</h3>
+              <p class="post__intro">El destino para tus compras...bero sit amet quam egestas semper. Aenean ultricies mi vitae est. </p> -->
+              <p class="read-more"><a href="mailto:info@travelwithfriends.com?subject=Reservar Vacaciones Fabulosas" class="btn btn-ghost">Reservar</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/orlando.jpg" alt="" class="img-responsive"></div>
+               <!--<h3>Orlando</h3>
+              <p class="post__intro"> A disfrutar de los mejores parques de atracciones, Disney World y Universal Studios te esperan...Vestibulum ersi.</p>
+              <h3>Las Vegas</h3>
+              <p class="post__intro">Las Vegas te ofrecera gran diversidad de opciones de entretenimiento.....  placerat eleifend leo. Quisque sit </p> -->
+              <p class="read-more"><a href="mailto:info@travelwithfriends.com?subject=Reservar Vacaciones Fabulosas" class="btn btn-ghost">Reservar</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/cancun.jpg" alt="" class="img-responsive"></div>
+               <!--<h3>Crucero Las Bahamas</h3>
+              <p class="post__intro">Conoce las Bahamas en un total de X dias en un crucero de ensueno...... habitant morbi tristique senectus et netus et malesuada fames ac turp, ante..</p>
+              <h3>Cancun</h3>
+              <p class="post__intro">El paraiso de Cancun te espera.......que senectus et netus et malesuada fames ac turp, ante..</p> -->
+              <p class="read-more"><a href="mailto:info@travelwithfriends.com?subject=Reservar Vacaciones Fabulosas" class="btn btn-ghost">Reservar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section ng-if="!vm.CR" class="background-gray-lightest">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/arenal1.jpg" alt="" class="img-responsive"></div>
+              <h3>Costa Rican Forest</h3>
+              <p class="post__intro"> Includes tours to Poas and Arenal volcano,  Canopy tour and a visit to Manuel Antonio National Park...</p>
+              <p class="read-more"><a href="#/forest" class="btn btn-ghost">Read More</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/rapidos.jpg" alt="" class="img-responsive"></div>
+              <h3>HoneyMooners</h3>
+              <p class="post__intro">We have two different options for honeymooners. Including canopy, rafting and more...</p>
+              <p class="read-more"><a href="#/honey" class="btn btn-ghost">Read More</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/rapel2.jpg" alt="" class="img-responsive"></div>
+              <h3>Multisport</h3>
+              <p class="post__intro">Canyoning Tour, rafting, suspension bridges and Hot Srping Water time included!</p>
+              <p class="read-more"><a href="#/multi"  class="btn btn-ghost">Read More</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/carara.jpg" alt="" class="img-responsive"></div>
+              <h3>One day tours</h3>
+              <p class="post__intro">Enjoy Poas and Irazu volcano, follow by rafting and a visit to Carara National Park...</p>
+              <p class="read-more"><a href="#/oneday" " class="btn btn-ghost">Read More</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/monteverde.jpg" alt="" class="img-responsive"></div>
+              <h3>Taste of Costa Rica</h3>
+              <p class="post__intro">Get to know Arenal volcano, Caño Negro Wildlife Refuge, Monteverde and Isla Tortuga...</p>
+              <p class="read-more"><a href="#/taste"  class="btn btn-ghost">Read More</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="post">
+              <div class="image"><img src="../images/manuel.jpg" alt="" class="img-responsive"></div>
+              <h3>Traditional</h3>
+              <p class="post__intro">Poas and Arenal volcano will be your destiny followed by Manuel Antonio National Park...</p>
+              <p class="read-more"><a href="#/traditional"  class="btn btn-ghost">Read More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- portfolio-->
+    <section ng-if="!vm.CR" id="portfolio" class="background-gray-lightest">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 ">Gallery</h1>
+            <!-- <p class="lead">You can make also a portfolio or image gallery.</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row no-space">
+          <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Atardecer.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 1"><img src="../images/Atardecer.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Butterfly.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 7"><img src="../images/Butterfly.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Customers.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 3"><img src="../images/Customers.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Egret.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 5"><img src="../images/Egret.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Macaw.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 4"><img src="../images/Macaw.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+         <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Paisajes1.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 4"><img src="../images/Paisajes1.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Sloth.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 2"><img src="../images/Sloth.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+           <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Parrot.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 2"><img src="../images/Parrot.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+           <div class="col-sm-4 col-xs-6">
+            <div class="box"><a href="../images/Howler.jpg" title="" data-lightbox="portfolio" data-title="Portfolio image 2"><img src="../images/Howler.jpg" alt="" class="img-responsive"></a></div>
+          </div>
+
+        </div>
+      </div>
+    </section> 
+
+
+
+
+
+  <footer ng-if="!vm.CR" class="footer">
+      <div class="footer__block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <h4>Travel with friends CR</h4>
+              <h4 >Contact us</h4>
+              <p class="social social--big"><a href="https://www.facebook.com/Travel-with-Friends-Costa-rica-257852680916419/"  target="_blank" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a>
+              <a href="mailto:info@travelwithfriends.com?subject=Informacion" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <h4 >Office information</h4>
+              <h5>Edificio Colon, Oficina 1-11  San Jose Paseo Colon</h5>
+              <h5>San Jose Costa Rica</h5>
+              <h5>Email: info@travelwithfriendscr.com</h5>
+              <h5> (506) 60513832</h5>
+              <h5> (506) 61702618</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy;2016 Travel with friends CR</p>
+            </div>
+            <div class="col-md-6">
+              <p class="credit">Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a></p>
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+     <footer ng-if="vm.CR" class="footer">
+      <div class="footer__block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <h4>Travel with friends Costa Rica</h4>
+              <h4 >Contacto</h4>
+              <p class="social social--big">
+                <a href="https://www.facebook.com/Travel-with-Friends-Costa-rica-257852680916419/"  target="_blank" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a>
+              <a href="mailto:info@travelwithfriends.com?subject=Informacion" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <h4 >Oficinas</h4>
+              <h5>Edificio Colon, Oficina 1-11  San Jose Paseo Colon</h5>
+              <h5>Correo: info@travelwithfriendscr.com</h5>
+              <h5>60513832</h5>
+              <h5>61702618</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy;2016 Travel with friends CR</p>
+            </div>
+            <div class="col-md-6">
+              <p class="credit">Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a></p>
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        
