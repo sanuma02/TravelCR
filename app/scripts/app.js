@@ -59,6 +59,36 @@ angular
         controller: 'TraditionalCtrl',
         controllerAs: 'traditional'
       })
+      .when('/arenal', {
+        templateUrl: 'views/arenal.html',
+        controller: 'ArenalCtrl',
+        controllerAs: 'arenal'
+      })
+      .when('/braulio', {
+        templateUrl: 'views/braulio.html',
+        controller: 'BraulioCtrl',
+        controllerAs: 'braulio'
+      })
+      .when('/cahuita', {
+        templateUrl: 'views/cahuita.html',
+        controller: 'CahuitaCtrl',
+        controllerAs: 'cahuita'
+      })
+      .when('/canopy', {
+        templateUrl: 'views/canopy.html',
+        controller: 'CanopyCtrl',
+        controllerAs: 'canopy'
+      })
+      .when('/canyoning', {
+        templateUrl: 'views/canyoning.html',
+        controller: 'CanyoningCtrl',
+        controllerAs: 'canyoning'
+      })
+      .when('/canonegro', {
+        templateUrl: 'views/canonegro.html',
+        controller: 'CanonegroCtrl',
+        controllerAs: 'canonegro'
+      })
       .otherwise({
         redirectTo: '/'
       });
