@@ -48,13 +48,13 @@
 <div class="container">
 <div class="col-md-6">
     <div class="form-area">  
-        <form role="form" method="POST" action="backend/email.php">>
+        <form role="form" method="POST" action="backend/email.php">
         <br style="clear:both">
             <h3 ng-if="!vm.CR" style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
             <h3 ng-if="vm.CR" style="margin-bottom: 25px; text-align: center;">Contactenos con cualquier consulta</h3>
             <div ng-if="!vm.CR" class="form-group">Name</div>
             <div ng-if="vm.CR" class="form-group">Nombre</div>
-    				<div class="form-group">
+        			<div class="form-group">
             <input type="text" class="form-control" id="name" name="name"  required>
 					</div>
           <div ng-if="!vm.CR" class="form-group">Email</div>
@@ -90,13 +90,13 @@
     <thead>
       <tr>
         <th><p class="social social--big"><a href="https://www.facebook.com/Travel-with-Friends-Costa-rica-257852680916419/"  target="_blank" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a></p></th>
-        <th> <p class="social social--big"><a href="mailto:info@travelwithfriends.com?subject=Informacion" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p></th>
+        <th> <p class="social social--big"><a href="mailto:info@travelwithfriendscr.com?subject=Informacion" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p></th>
       </tr>
     </thead>
   </table>
   <div ng-if="!vm.CR">
       <h4 >Office information</h4>
-      <h5>Edificio Colon, Oficina 1-11  San Jose Paseo Colon</h5>
+      <h5>Colon Building, Oficina 1-11  San Jose Paseo Colon</h5>
       <h5>San Jose Costa Rica</h5>
       <h5>Email: info@travelwithfriendscr.com</h5>
       <h5> (506) 60513832</h5>
