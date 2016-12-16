@@ -89,6 +89,31 @@ angular
         controller: 'CanonegroCtrl',
         controllerAs: 'canonegro'
       })
+      .when('/carara', {
+        templateUrl: 'views/carara.html',
+        controller: 'CararaCtrl',
+        controllerAs: 'carara'
+      })
+      .when('/chirripo', {
+        templateUrl: 'views/chirripo.html',
+        controller: 'ChirripoCtrl',
+        controllerAs: 'chirripo'
+      })
+      .when('/chocolate', {
+        templateUrl: 'views/chocolate.html',
+        controller: 'ChocolateCtrl',
+        controllerAs: 'chocolate'
+      })
+      .when('/corcovado', {
+        templateUrl: 'views/corcovado.html',
+        controller: 'CorcovadoCtrl',
+        controllerAs: 'corcovado'
+      })
+      .when('/curu', {
+        templateUrl: 'views/curu.html',
+        controller: 'CuruCtrl',
+        controllerAs: 'curu'
+      })
       .otherwise({
         redirectTo: '/'
       });
