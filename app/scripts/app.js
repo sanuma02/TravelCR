@@ -114,6 +114,31 @@ angular
         controller: 'CuruCtrl',
         controllerAs: 'curu'
       })
+      .when('/irazu', {
+        templateUrl: 'views/irazu.html',
+        controller: 'IrazuCtrl',
+        controllerAs: 'irazu'
+      })
+      .when('/baldi', {
+        templateUrl: 'views/baldi.html',
+        controller: 'BaldiCtrl',
+        controllerAs: 'baldi'
+      })
+      .when('/silencio', {
+        templateUrl: 'views/silencio.html',
+        controller: 'SilencioCtrl',
+        controllerAs: 'silencio'
+      })
+      .when('/donjuan', {
+        templateUrl: 'views/donjuan.html',
+        controller: 'DonjuanCtrl',
+        controllerAs: 'donjuan'
+      })
+      .when('/danaus', {
+        templateUrl: 'views/danaus.html',
+        controller: 'DanausCtrl',
+        controllerAs: 'danaus'
+      })
       .otherwise({
         redirectTo: '/'
       });
